@@ -44,8 +44,7 @@ def _to_list(data: T | Iterable[T]) -> Iterable[T]:
     """
     if isinstance(data, Iterable) and not isinstance(data, (dict, str)):
         return data
-    else:
-        return [data]
+    return [data]
 
 
 class Pipeline:
