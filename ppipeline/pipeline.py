@@ -41,7 +41,7 @@ def _to_list(data: T | list[T]) -> list[T]:
     Returns:
         The input data as a list
     """
-    if isinstance(data, Iterable):
+    if isinstance(data, Iterable) and not isinstance(data, (dict, str)):
         return data
     else:
         return [data]
