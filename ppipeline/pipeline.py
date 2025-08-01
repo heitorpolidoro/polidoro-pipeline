@@ -23,13 +23,9 @@ T = TypeVar("T")
 class EmptyPipelineError(Exception):
     """Exception raised when attempting to run a pipeline without any steps."""
 
-    pass
-
 
 class InvalidThreadCountError(Exception):
     """Exception raised when an invalid string thread count is passed to the Pipeline."""
-
-    pass
 
 
 def _to_list(data: T | Iterable[T]) -> Iterable[T]:
@@ -69,6 +65,8 @@ class Pipeline:
                           If None, uses the default ThreadPoolExecutor behavior.
         """
         self.steps = steps or []
+        self._running_tasks = 1
+        self.lock = threading.Lock()
         if isinstance(thread_count, str):
             if thread_count[0] == "x":
                 thread_count = int(thread_count[1:]) * os.cpu_count()
@@ -78,8 +76,6 @@ class Pipeline:
                 )
 
         self.thread_count = thread_count
-        self._running_tasks = 1
-        self.lock = threading.Lock()
 
     def add_step(self, step: Callable) -> None:
         """
