@@ -12,8 +12,9 @@ a simple interface for defining and executing processing pipelines.
 import os
 import threading
 import time
+from collections.abc import Iterable
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
-from typing import Any, Callable, Iterable, Iterator, TypeVar
+from typing import Any, Callable, Iterator, TypeVar
 
 # Type variables for generic typing
 T = TypeVar("T")
@@ -31,7 +32,7 @@ class InvalidThreadCountError(Exception):
     pass
 
 
-def _to_list(data: T | list[T]) -> list[T]:
+def _to_list(data: T | Iterable[T]) -> Iterable[T]:
     """
     Convert input data to a list if it's not already a list.
 
@@ -115,7 +116,7 @@ class Pipeline:
         executor = ThreadPoolExecutor(max_workers=self.thread_count)
 
         # List to collect final results
-        results: list[Future] = []
+        results: list[Future[Any]] = []
 
         # Start the pipeline by processing the initial data
         self._callback(data, executor, 0, results)
@@ -138,7 +139,7 @@ class Pipeline:
         future: Future | Any,
         executor: ThreadPoolExecutor,
         step_index: int,
-        results: list[Future],
+        results: list[Future[Any]],
     ) -> None:
         """
         Internal callback method to handle the results of each step and chain to the next step.
