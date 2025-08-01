@@ -41,7 +41,7 @@ def _to_list(data: T | list[T]) -> list[T]:
     Returns:
         The input data as a list
     """
-    if isinstance(data, Iterable):
+    if isinstance(data, Iterable) and not isinstance(data, (dict, str)):
         return data
     else:
         return [data]
@@ -173,7 +173,6 @@ class Pipeline:
 
         # Process each item in the data
         for task in new_tasks:
-
             if step_index < len(self.steps) - 1:
                 # If there are more steps, chain to the next step using a callback
                 task.add_done_callback(

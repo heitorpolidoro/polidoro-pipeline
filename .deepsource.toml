@@ -16,9 +16,7 @@ max_line_length = 120
 type_checker = "mypy"
 
 [[transformers]]
-name = "black"
-enabled = true
+name = "ruff"
 
 [[transformers]]
 name = "isort"
-enabled = true
