@@ -8,22 +8,26 @@ of values, automatically parallelizing the processing when possible.
 The Pipeline class uses Python's ThreadPoolExecutor for parallel execution and provides
 a simple interface for defining and executing processing pipelines.
 """
+
 import os
-import time
 import threading
-from concurrent.futures import ThreadPoolExecutor, Future, as_completed
-from typing import Any, Callable, Iterator, TypeVar, Iterable
+import time
+from concurrent.futures import Future, ThreadPoolExecutor, as_completed
+from typing import Any, Callable, Iterable, Iterator, TypeVar
 
 # Type variables for generic typing
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 class EmptyPipelineError(Exception):
     """Exception raised when attempting to run a pipeline without any steps."""
+
     pass
+
 
 class InvalidThreadCountError(Exception):
     """Exception raised when an invalid string thread count is passed to the Pipeline."""
+
     pass
 
 
@@ -69,7 +73,9 @@ class Pipeline:
             if thread_count[0] == "x":
                 thread_count = int(thread_count[1:]) * os.cpu_count()
             else:
-                raise InvalidThreadCountError(f"Invalid thread count string: {thread_count}")
+                raise InvalidThreadCountError(
+                    f"Invalid thread count string: {thread_count}"
+                )
 
         self.thread_count = thread_count
         self._running_tasks = 1
@@ -171,9 +177,7 @@ class Pipeline:
             if step_index < len(self.steps) - 1:
                 # If there are more steps, chain to the next step using a callback
                 task.add_done_callback(
-                    lambda x: self._callback(
-                        x, executor, step_index + 1, results
-                    )
+                    lambda x: self._callback(x, executor, step_index + 1, results)
                 )
             else:
                 # If this is the last step, collect the result and decrement the task counter
