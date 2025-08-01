@@ -2,24 +2,24 @@
 
 A powerful Python library for parallel data processing through a sequence of steps.
 
-[![Code Quality](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/code_quality.yml/badge.svg)](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/code_quality.yml)
-[![Upload Python Package](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/pypi-publish.yml)
+[![Code Quality](https://github.com/heitorpolidoro/polidoro-pipeline/actions/workflows/code_quality.yml/badge.svg)](https://github.com/heitorpolidoro/polidoro-pipeline/actions/workflows/code_quality.yml)
+[![Upload Python Package](https://github.com/heitorpolidoro/polidoro-pipeline/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/heitorpolidoro/polidoro-pipeline/actions/workflows/pypi-publish.yml)
 <br>
-[![Latest Version](https://img.shields.io/github/v/release/heitorpolidoro/polidoro_pipeline?label=Latest%20Version)](https://github.com/heitorpolidoro/polidoro_pipeline/releases/latest)
-![GitHub Release Date](https://img.shields.io/github/release-date/heitorpolidoro/polidoro_pipeline)
-![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/heitorpolidoro/polidoro_pipeline/latest)
-![GitHub last commit](https://img.shields.io/github/last-commit/heitorpolidoro/polidoro_pipeline)
+[![Latest Version](https://img.shields.io/github/v/release/heitorpolidoro/polidoro-pipeline?label=Latest%20Version)](https://github.com/heitorpolidoro/polidoro-pipeline/releases/latest)
+![GitHub Release Date](https://img.shields.io/github/release-date/heitorpolidoro/polidoro-pipeline)
+![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/heitorpolidoro/polidoro-pipeline/latest)
+![GitHub last commit](https://img.shields.io/github/last-commit/heitorpolidoro/polidoro-pipeline)
 <br>
-[![GitHub issues](https://img.shields.io/github/issues/heitorpolidoro/polidoro_pipeline)](https://github.com/heitorpolidoro/polidoro_pipeline/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/heitorpolidoro/polidoro_pipeline)](https://github.com/heitorpolidoro/polidoro_pipeline/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/heitorpolidoro/polidoro-pipeline)](https://github.com/heitorpolidoro/polidoro-pipeline/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/heitorpolidoro/polidoro-pipeline)](https://github.com/heitorpolidoro/polidoro-pipeline/pulls)
 
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=coverage)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro-pipeline&metric=coverage)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro-pipeline)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro-pipeline&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro-pipeline)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro-pipeline&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro-pipeline)
 <br>
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=bugs)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro-pipeline&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro-pipeline)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro-pipeline&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro-pipeline)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro-pipeline&metric=bugs)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro-pipeline)
 
 ## 🚀 Overview
 
@@ -36,7 +36,7 @@ Polidoro Pipeline is a Python library that simplifies parallel data processing t
 ## 📋 Installation
 
 ```bash
-pip install polidoro_pipeline
+pip install polidoro-pipeline
 ```
 
 ## 🔧 Usage
