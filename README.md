@@ -49,7 +49,7 @@ Polidoro Pipeline is a Python library that simplifies parallel data processing t
 ## 📋 Installation
 
 ```bash
-pip install polidoro-pipeline
+pip install polidoro_pipeline
 ```
 
 ## 🔧 Usage
