@@ -7,7 +7,7 @@ name = "polidoro_pipeline"
 authors = [
     { name="Heitor Luis Polidoro" },
 ]
-description = "Package to help creates Github Apps."
+description = "A powerful Python library for parallel data processing through a sequence of steps."
 readme = "README.md"
 requires-python = ">=3.9"
 keywords = []
