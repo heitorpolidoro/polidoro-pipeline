@@ -1,4 +1,4 @@
-# PROJECT_NAME
+# Polidoro Pipeline
 
 Project description
 

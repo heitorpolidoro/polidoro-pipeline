@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "PROJECT_NAME"
+name = "polidoro_pipeline"
 authors = [
     { name="Heitor Luis Polidoro" },
 ]
@@ -20,10 +20,10 @@ classifiers = [
 dynamic = ["version", "dependencies"]
 
 [project.urls]
-"Homepage" = "https://github.com/heitorpolidoro/PROJECT_NAME"
+"Homepage" = "https://github.com/heitorpolidoro/polidoro_pipeline"
 
 [tool.setuptools.dynamic]
-version = {attr = ".__version__"}
+version = {attr = "ppipeline.__version__"}
 dependencies = {file = ["requirements.txt"]}
 
 [tool.coverage.run]

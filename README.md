@@ -1,21 +1,103 @@
-# PROJECT_NAME
-Description
+# Polidoro Pipeline
 
-[![Code Quality](https://github.com/heitorpolidoro/project_name/actions/workflows/code_quality.yml/badge.svg)](https://github.com/heitorpolidoro/project_name/actions/workflows/code_quality.yml)
-[![Upload Python Package](https://github.com/heitorpolidoro/project_name/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/heitorpolidoro/project_name/actions/workflows/pypi-publish.yml)
-<br>
-[![Latest Version](https://img.shields.io/github/v/release/heitorpolidoro/project_name?label=Latest%20Version)](https://github.com/heitorpolidoro/project_name/releases/latest)
-![GitHub Release Date](https://img.shields.io/github/release-date/heitorpolidoro/project_name)
-![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/heitorpolidoro/project_name/latest)
-![GitHub last commit](https://img.shields.io/github/last-commit/heitorpolidoro/project_name)
-<br>
-[![GitHub issues](https://img.shields.io/github/issues/heitorpolidoro/project_name)](https://github.com/heitorpolidoro/project_name/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/heitorpolidoro/project_name)](https://github.com/heitorpolidoro/project_name/pulls)
+A powerful Python library for parallel data processing through a sequence of steps.
 
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_project_name&metric=coverage)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_project_name)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_project_name&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_project_name)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_project_name&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_project_name)
+[![Code Quality](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/code_quality.yml/badge.svg)](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/code_quality.yml)
+[![Upload Python Package](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/heitorpolidoro/polidoro_pipeline/actions/workflows/pypi-publish.yml)
 <br>
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_project_name&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_project_name)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_project_name&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_project_name)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_project_name&metric=bugs)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_project_name)
+[![Latest Version](https://img.shields.io/github/v/release/heitorpolidoro/polidoro_pipeline?label=Latest%20Version)](https://github.com/heitorpolidoro/polidoro_pipeline/releases/latest)
+![GitHub Release Date](https://img.shields.io/github/release-date/heitorpolidoro/polidoro_pipeline)
+![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/heitorpolidoro/polidoro_pipeline/latest)
+![GitHub last commit](https://img.shields.io/github/last-commit/heitorpolidoro/polidoro_pipeline)
+<br>
+[![GitHub issues](https://img.shields.io/github/issues/heitorpolidoro/polidoro_pipeline)](https://github.com/heitorpolidoro/polidoro_pipeline/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/heitorpolidoro/polidoro_pipeline)](https://github.com/heitorpolidoro/polidoro_pipeline/pulls)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=coverage)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+<br>
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=heitorpolidoro_polidoro_pipeline&metric=bugs)](https://sonarcloud.io/summary/new_code?id=heitorpolidoro_polidoro_pipeline)
+
+## 🚀 Overview
+
+Polidoro Pipeline is a Python library that simplifies parallel data processing through a sequence of steps. It automatically handles parallelization using Python's ThreadPoolExecutor, making it easy to process both single values and lists of values efficiently.
+
+## ✨ Features
+
+- 🔄 Process data through a sequence of steps
+- ⚡ Automatic parallelization of processing
+- 🧩 Simple and intuitive API
+- 🔌 Easy to integrate with existing code
+- 📦 Handles both single values and lists of values
+
+## 📋 Installation
+
+```bash
+pip install polidoro_pipeline
+```
+
+## 🔧 Usage
+
+### Basic Example
+
+```python
+from ppipeline import Pipeline
+
+# Define processing steps
+def add_1(x):
+    return x + 1
+
+def multiply_by_2(x):
+    return x * 2
+
+# Create a pipeline with steps
+pipeline = Pipeline([add_1, multiply_by_2])
+
+# Process a single value
+result = list(pipeline.run(1))  # [4]
+
+# Process multiple values in parallel
+results = list(pipeline.run([1, 2, 3]))  # [4, 6, 8]
+```
+
+### Adding Steps Incrementally
+
+```python
+pipeline = Pipeline()
+pipeline.add_step(add_1)
+pipeline.add_step(multiply_by_2)
+result = list(pipeline.run(2))  # [6]
+```
+
+### Controlling Thread Count
+
+```python
+# Limit the number of worker threads
+pipeline = Pipeline([add_1, multiply_by_2], thread_count=4)
+results = list(pipeline.run([1, 2, 3, 4, 5]))
+```
+
+## 🧠 How It Works
+
+1. The Pipeline class takes a list of callable functions as steps
+2. When you call `run()` with input data, each item is processed through all steps in sequence
+3. If the input is a list, items are processed in parallel using ThreadPoolExecutor
+4. Each step can return a single value or a list of values
+5. If a step returns multiple values (as a list), each value is processed independently in subsequent steps
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
