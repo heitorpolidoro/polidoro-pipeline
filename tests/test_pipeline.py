@@ -100,6 +100,7 @@ def test_when_error() -> None:
     Verifies that when a function in the pipeline raises an exception,
     the exception is properly propagated to the caller.
     """
+
     def failing_function(_x: int) -> None:
         """
         Helper function that always raises a ValueError.
